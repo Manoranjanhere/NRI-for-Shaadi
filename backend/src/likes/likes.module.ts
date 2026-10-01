@@ -1,0 +1,24 @@
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { LikesController } from './likes.controller';
+import { LikesService } from './likes.service';
+import { Like } from './entities/like.entity';
+import { User } from '../users/entities/user.entity';
+import { UserPhoto } from '../users/entities/user-photo.entity';
+import { Pass } from '../passes/entities/pass.entity';
+import { Block } from '../blocks/entities/block.entity';
+import { Shortlist } from '../shortlist/entities/shortlist.entity';
+import { DevicesModule } from '../devices/devices.module';
+import { UsersModule } from '../users/users.module';
+
+@Module({
+  imports: [
+    TypeOrmModule.forFeature([Like, User, UserPhoto, Pass, Block, Shortlist]),
+    DevicesModule,
+    UsersModule,
+  ],
+  controllers: [LikesController],
+  providers: [LikesService],
+  exports: [LikesService],
+})
+export class LikesModule {}

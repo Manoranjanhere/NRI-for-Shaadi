@@ -1,0 +1,32 @@
+<svg width="1024" height="500" viewBox="0 0 1024 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1024" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8E1034"/>
+      <stop offset="0.6" stop-color="#590D22"/>
+      <stop offset="1" stop-color="#2B0510"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="80" y1="120" x2="400" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF1C1"/>
+      <stop offset="0.4" stop-color="#F3D98A"/>
+      <stop offset="0.75" stop-color="#D4A017"/>
+      <stop offset="1" stop-color="#9C6B05"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(250 240) scale(300)">
+      <stop stop-color="#F3D98A" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#F3D98A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="500" fill="url(#bg)"/>
+  <rect width="1024" height="500" fill="url(#glow)"/>
+
+  <circle cx="200" cy="260" r="100" stroke="url(#gold)" stroke-width="28"/>
+  <circle cx="306" cy="260" r="100" stroke="url(#gold)" stroke-width="28"/>
+  <path d="M 290 161 A 100 100 0 0 1 299 260" stroke="url(#gold)" stroke-width="28"/>
+  <path d="M306 112 L330 140 L306 172 L282 140 Z" fill="#EAF5FF" stroke="#D4A017" stroke-width="5" stroke-linejoin="round"/>
+
+  <text x="470" y="200" fill="#FFF7EC" font-size="76" font-family="Georgia, 'Times New Roman', serif" font-weight="700" letter-spacing="2">NRI <tspan fill="#E8C35A" font-style="italic">Shaadi</tspan></text>
+  <text x="472" y="256" fill="#F3D98A" font-size="27" font-family="Georgia, 'Times New Roman', serif">Matrimony for Indians around the world</text>
+  <text x="472" y="318" fill="#CBB5BB" font-size="20" font-family="Arial, sans-serif">USA  |  Canada  |  UK  |  Australia  |  UAE  |  Singapore</text>
+  <rect x="472" y="360" width="330" height="48" rx="24" fill="#D4A017"/>
+  <text x="637" y="392" text-anchor="middle" fill="#2B0510" font-size="22" font-family="Arial, sans-serif" font-weight="700">First month FREE</text>
+</svg>
