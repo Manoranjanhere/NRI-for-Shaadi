@@ -24,7 +24,7 @@ GoogleSignin.configure({
   offlineAccess: false,
 });
 
-const PRIVACY_POLICY_URL = 'https://api.sugarbf.club/api/v1/privacy';
+const PRIVACY_POLICY_URL = 'https://nri-api.sugarbf.club/api/v1/privacy';
 
 const HIGHLIGHTS: [string, string][] = [
   ['🌍', 'NRI brides & grooms in USA, UK, Canada, UAE, Australia & more'],

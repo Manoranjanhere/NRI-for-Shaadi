@@ -30,7 +30,10 @@ export class FirebaseAdminService {
         console.log(`[Firebase] Admin SDK ready (project: ${credentials.projectId})`);
         return;
       } catch (err) {
-        console.warn('[Firebase] FIREBASE_SERVICE_ACCOUNT_JSON invalid:', err.message);
+        console.warn(
+          '[Firebase] FIREBASE_SERVICE_ACCOUNT_JSON invalid:',
+          err instanceof Error ? err.message : String(err),
+        );
       }
     }
 
@@ -63,7 +66,7 @@ export class FirebaseAdminService {
       this.initialized = true;
       console.log(`[Firebase] Admin SDK ready (project: ${projectId})`);
     } catch (err) {
-      console.warn('[Firebase] Init failed:', err.message);
+      console.warn('[Firebase] Init failed:', err instanceof Error ? err.message : String(err));
     }
   }
 

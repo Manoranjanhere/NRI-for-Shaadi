@@ -23,7 +23,7 @@ export function formatOtpError(err: unknown): string {
       return (
         'Server temporarily unavailable (502). ' +
         'If this number was just banned, wait a moment and try again — ' +
-        'or check that the API on api.sugarbf.club is running.\n\n' +
+        'or check that the API on nri-api.sugarbf.club is running.\n\n' +
         (apiMessage || '')
       ).trim();
     }

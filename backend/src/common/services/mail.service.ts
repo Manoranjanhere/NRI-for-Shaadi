@@ -36,7 +36,8 @@ export class MailService {
         html,
       });
     } catch (err) {
-      this.logger.error(`Failed to send email to ${to}: ${err.message}`);
+      const message = err instanceof Error ? err.message : String(err);
+      this.logger.error(`Failed to send email to ${to}: ${message}`);
     }
   }
 
@@ -123,7 +124,7 @@ export class MailService {
         <p>Hi <strong>${userName}</strong>,</p>
         <p>Your ${BRAND} profile has received an official warning.</p>
         <p style="background:#2A181E;padding:16px;border-radius:8px;border-left:4px solid #FF9500">${reason}</p>
-        <p>Please review our <a href="${process.env.PRIVACY_URL || 'https://api.sugarbf.club/api/v1/privacy'}" style="color:${GOLD}">Community Guidelines</a>.
+        <p>Please review our <a href="${process.env.PRIVACY_URL || 'https://nri-api.sugarbf.club/api/v1/privacy'}" style="color:${GOLD}">Community Guidelines</a>.
         Repeated violations may result in account suspension.</p>
       </div>
     `);
