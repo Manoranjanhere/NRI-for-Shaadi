@@ -26,12 +26,6 @@ GoogleSignin.configure({
 
 const PRIVACY_POLICY_URL = 'https://nri-api.sugarbf.club/api/v1/privacy';
 
-const HIGHLIGHTS: [string, string][] = [
-  ['🌍', 'NRI brides & grooms in USA, UK, Canada, UAE, Australia & more'],
-  ['🛡️', 'Photo-verified profiles and contact details kept private'],
-  ['🎁', '1 month free, then ₹300/month — same for brides & grooms'],
-];
-
 type Props = WelcomeScreenProps;
 
 export default function WelcomeScreen({ navigation }: Props) {
@@ -148,14 +142,6 @@ export default function WelcomeScreen({ navigation }: Props) {
       {/* Logo & tagline */}
       <View style={styles.heroSection}>
         <BrandLogo variant="stacked" size={96} tagline="Matrimony for Indians around the world" />
-        <View style={styles.highlights}>
-          {HIGHLIGHTS.map(([icon, text]) => (
-            <View key={text} style={styles.highlightRow}>
-              <Text style={styles.highlightIcon}>{icon}</Text>
-              <Text style={styles.highlightText}>{text}</Text>
-            </View>
-          ))}
-        </View>
       </View>
 
       {/* Auth buttons */}
@@ -226,10 +212,6 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingHorizontal: Spacing.lg,
   },
-  highlights: { marginTop: Spacing.xl, gap: Spacing.sm, alignSelf: 'stretch' },
-  highlightRow: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
-  highlightIcon: { fontSize: 18, width: 26, textAlign: 'center' },
-  highlightText: { flex: 1, color: Colors.textPrimary, fontSize: FontSize.sm, lineHeight: 19, opacity: 0.9 },
   buttonsContainer: {
     paddingHorizontal: Spacing.lg,
     paddingBottom: 48,

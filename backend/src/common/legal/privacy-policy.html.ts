@@ -49,7 +49,7 @@ export const PRIVACY_POLICY_HTML = `<!doctype html>
 </head>
 <body>
   <div class="wrap">
-    <a class="brand" href="https://sugarbf.club">💍 NRI <span>Shaadi</span></a>
+    <a class="brand" href="https://nri-api.sugarbf.club/api/v1/privacy">💍 NRI <span>Shaadi</span></a>
     <h1>Privacy Policy</h1>
     <p class="meta"><strong>Effective date:</strong> 29 September 2026 &nbsp;·&nbsp; <strong>Last updated:</strong> 29 September 2026</p>
 
