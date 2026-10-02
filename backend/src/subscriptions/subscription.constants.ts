@@ -105,7 +105,7 @@ export function enrichPlanWithPlayIds(plan: PlanConfig) {
 
 export function getPlayCatalog() {
   return {
-    packageName: process.env.GOOGLE_PLAY_PACKAGE_NAME || 'com.nrishaadi.app',
+    packageName: process.env.GOOGLE_PLAY_PACKAGE_NAME || 'com.nriconnectshaadi.app',
     subscriptions: ALL_PLANS.map((plan) => ({
       productId: getPlaySubscriptionProductId(plan.id, 'monthly'),
       planId: plan.id,

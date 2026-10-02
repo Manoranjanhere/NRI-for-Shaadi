@@ -27,7 +27,7 @@ export class VerifyGooglePlaySubscriptionDto {
   @IsString()
   purchaseToken: string;
 
-  @ApiProperty({ required: false, example: 'com.nrishaadi.app' })
+  @ApiProperty({ required: false, example: 'com.nriconnectshaadi.app' })
   @IsOptional()
   @IsString()
   packageName?: string;

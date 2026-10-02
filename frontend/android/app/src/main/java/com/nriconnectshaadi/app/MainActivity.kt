@@ -1,4 +1,4 @@
-package com.nrishaadi.app
+package com.nriconnectshaadi.app
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

@@ -25,7 +25,7 @@ export class GooglePlayBillingService {
   }
 
   private getPackageName(): string {
-    return process.env.GOOGLE_PLAY_PACKAGE_NAME || 'com.nrishaadi.app';
+    return process.env.GOOGLE_PLAY_PACKAGE_NAME || 'com.nriconnectshaadi.app';
   }
 
   private async getAndroidPublisher() {

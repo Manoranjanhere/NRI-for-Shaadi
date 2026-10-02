@@ -1,0 +1,44 @@
+<svg width="512" height="512" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Google Play icon: full-bleed square (Play applies its own corner mask) -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8E1034"/>
+      <stop offset="0.55" stop-color="#590D22"/>
+      <stop offset="1" stop-color="#2B0510"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 400) rotate(90) scale(420 520)">
+      <stop stop-color="#F3D98A" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#F3D98A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="250" y1="230" x2="780" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF1C1"/>
+      <stop offset="0.35" stop-color="#F3D98A"/>
+      <stop offset="0.7" stop-color="#D4A017"/>
+      <stop offset="1" stop-color="#9C6B05"/>
+    </linearGradient>
+    <linearGradient id="diamond" x1="480" y1="170" x2="560" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#CFE8FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+
+  <g fill="#F3D98A" fill-opacity="0.18">
+    <circle cx="512" cy="112" r="10"/><circle cx="712" cy="166" r="10"/><circle cx="858" cy="312" r="10"/>
+    <circle cx="912" cy="512" r="10"/><circle cx="858" cy="712" r="10"/><circle cx="712" cy="858" r="10"/>
+    <circle cx="312" cy="858" r="10"/><circle cx="166" cy="712" r="10"/>
+    <circle cx="112" cy="512" r="10"/><circle cx="166" cy="312" r="10"/><circle cx="312" cy="166" r="10"/>
+  </g>
+
+  <circle cx="420" cy="470" r="172" stroke="url(#gold)" stroke-width="46"/>
+  <circle cx="604" cy="470" r="172" stroke="url(#gold)" stroke-width="46"/>
+  <path d="M 575 316 A 172 172 0 0 1 592 470" stroke="url(#gold)" stroke-width="46" stroke-linecap="butt"/>
+
+  <path d="M604 214 L644 262 L604 318 L564 262 Z" fill="url(#diamond)" stroke="#D4A017" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M564 262 H644 M584 238 L604 318 L624 238" stroke="#9FC7EE" stroke-width="4"/>
+
+  <text x="512" y="818" text-anchor="middle" fill="#FFF7EC" font-size="120" font-family="Georgia, 'Times New Roman', serif" font-weight="700" letter-spacing="6">NRI</text>
+  <text x="512" y="902" text-anchor="middle" fill="url(#gold)" font-size="72" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" letter-spacing="4">Shaadi</text>
+</svg>

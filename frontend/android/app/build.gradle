@@ -61,9 +61,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.nrishaadi.app"
+    namespace "com.nriconnectshaadi.app"
     defaultConfig {
-        applicationId "com.nrishaadi.app"
+        applicationId "com.nriconnectshaadi.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

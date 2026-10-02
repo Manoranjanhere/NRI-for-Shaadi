@@ -220,7 +220,7 @@ The API base URL is set in `src/config/api.config.ts`.
 
 ---
 
-## Firebase, Google Sign-In & Play Setup (new app: `com.nrishaadi.app`)
+## Firebase, Google Sign-In & Play Setup (new app: `com.nriconnectshaadi.app`)
 
 NRI Shaadi is a separate app from SugarBF. It has its own package id, Firebase project and Play listing. Sign-in is by phone OTP, Google or Apple; Facebook login has been removed.
 
@@ -234,7 +234,7 @@ keytool -list -v -keystore app/nrishaadi-upload.keystore -alias nrishaadi-upload
 
 **2. Firebase project**
 1. In [Firebase Console](https://console.firebase.google.com), create a new project (e.g. `nri-shaadi`).
-2. Add an **Android app** with package **`com.nrishaadi.app`** and add the upload keystore's **SHA-1 and SHA-256**. Also add the debug keystore's SHA-1 (`keytool -list -v -keystore app/debug.keystore -storepass android`) so phone OTP and Google Sign-In work in debug builds.
+2. Add an **Android app** with package **`com.nriconnectshaadi.app`** and add the upload keystore's **SHA-1 and SHA-256**. Also add the debug keystore's SHA-1 (`keytool -list -v -keystore app/debug.keystore -storepass android`) so phone OTP and Google Sign-In work in debug builds.
 3. **Authentication → Sign-in method:** enable **Phone** and **Google**.
 4. Download **`google-services.json`** to `frontend/android/app/google-services.json` (it is gitignored).
 5. In `google-services.json`, find `oauth_client`. Copy the `client_type: 3` id into `frontend/src/config/google.config.ts` (`GOOGLE_WEB_CLIENT_ID`) and into `GOOGLE_CLIENT_ID` in `backend/.env`. Copy the `client_type: 1` id into `GOOGLE_ANDROID_CLIENT_ID`.
@@ -242,7 +242,7 @@ keytool -list -v -keystore app/nrishaadi-upload.keystore -alias nrishaadi-upload
 7. **Cloud Messaging:** push notifications work automatically through the same project.
 
 **3. Play Console**
-1. Create a new app called **NRI Shaadi**. Upload the first AAB with package `com.nrishaadi.app` (the package is permanent after this).
+1. Create a new app called **NRI Shaadi**. Upload the first AAB with package `com.nriconnectshaadi.app` (the package is permanent after this).
 2. **Setup → App signing:** copy the **App signing key SHA-1 and SHA-256** into the Firebase Android app. Without this, Google Sign-In and phone OTP fail for users who install from Play.
 3. **Monetize → Subscriptions:** create **`nrishaadi_premium_1m`**, a base plan that auto-renews monthly at **₹300**. Don't add a Play free trial, because the app gives every new member 30 days free.
 4. **Setup → API access:** link a Google Cloud service account with the Android Publisher API. Grant it *View financial data / Manage orders and subscriptions*, then paste its JSON into `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON`.
@@ -325,7 +325,7 @@ Admins handle reports, bans (user / phone / email / IP), user search, password r
 - **App icon:** `frontend/nrishaadi_app_icon.svg`, rendered to all Android `mipmap-*` densities (including round and adaptive icons).
 - **Play Store assets:** `play-store-assets/icon-512.png` and `feature-graphic.png`; the feature-graphic source is `feature-graphic.svg`.
 
-- **Android package:** `com.nrishaadi.app`; it has its own Firebase project and Play listing (see setup above).
+- **Android package:** `com.nriconnectshaadi.app`; it has its own Firebase project and Play listing (see setup above).
 - **Domain:** the API and legal URLs still use `sugarbf.club` for now. To change them, update `frontend/src/config/api.config.ts`, the URLs in `backend/.env`, `deploy/nginx-api.conf` and the privacy policy page.
 
 ---
