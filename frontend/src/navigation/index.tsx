@@ -3,6 +3,7 @@ import { AppState, View, Text, ActivityIndicator, StyleSheet } from 'react-nativ
 import { NavigationContainer, DarkTheme, type NavigationContainerRef } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useAuthStore } from '../store/auth.store';
 import { useLocaleStore } from '../store/locale.store';
@@ -62,6 +63,7 @@ function TabIcon({ name, focused }: { name: keyof MainTabParamList; focused: boo
 function MainTabs() {
   const unseenInterests = useBadgeStore((s) => s.unseenInterests);
   const unreadMessages = useBadgeStore((s) => s.unreadMessages);
+  const insets = useSafeAreaInsets();
 
   useEffect(() => {
     const refresh = () => useBadgeStore.getState().refresh();
@@ -85,7 +87,7 @@ function MainTabs() {
         tabBarIcon: ({ focused }) => <TabIcon name={route.name} focused={focused} />,
         tabBarActiveTintColor: Colors.secondary,
         tabBarInactiveTintColor: Colors.textMuted,
-        tabBarStyle: styles.tabBar,
+        tabBarStyle: [styles.tabBar, { height: 62 + insets.bottom, paddingBottom: 8 + insets.bottom }],
         tabBarLabelStyle: styles.tabLabel,
         tabBarBadgeStyle: styles.tabBadge,
       })}
@@ -137,6 +139,7 @@ export default function AppNavigator() {
         : 'Main';
 
   return (
+    <SafeAreaProvider>
     <NavigationContainer ref={navigationRef} theme={navTheme}>
       <NotificationHandler navigationRef={navigationRef} />
       <Stack.Navigator initialRouteName={initialRoute} screenOptions={{ headerShown: false, animation: 'slide_from_right' }}>
@@ -161,6 +164,7 @@ export default function AppNavigator() {
         <Stack.Screen name="ChatConversation" component={ChatConversationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
 
@@ -169,9 +173,7 @@ const styles = StyleSheet.create({
   tabBar: {
     backgroundColor: Colors.surface,
     borderTopColor: Colors.border,
-    height: 62,
     paddingTop: 6,
-    paddingBottom: 8,
   },
   tabLabel: { fontSize: 11, fontWeight: '700' },
   tabIcon: { fontSize: 20 },
